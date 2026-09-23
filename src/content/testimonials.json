@@ -1,0 +1,42 @@
+[
+  {
+    "id": "test-1",
+    "name": "Laura M.",
+    "role": "Ex empleada - Sector Retail",
+    "rating": 5,
+    "text": "Me despidieron sin causa justificada después de 6 años de trabajo. El equipo de Asesoría y Defensa Laboral llevó mi caso con total profesionalismo y logré una indemnización mucho mayor de la que esperaba.",
+    "photo": "https://i.pravatar.cc/200?img=45",
+    "approved": true,
+    "date": "2026-02-14"
+  },
+  {
+    "id": "test-2",
+    "name": "Roberto S.",
+    "role": "Operador industrial",
+    "rating": 5,
+    "text": "Excelente atención desde la primera llamada. Me explicaron todo con claridad y estuvieron al pendiente de mi caso en cada audiencia. Totalmente recomendados.",
+    "photo": "https://i.pravatar.cc/200?img=51",
+    "approved": true,
+    "date": "2026-01-22"
+  },
+  {
+    "id": "test-3",
+    "name": "Grupo Industrial del Bajío",
+    "role": "Cliente empresarial",
+    "rating": 5,
+    "text": "Nos asesoraron en la reestructuración de nuestros contratos laborales y en la resolución de un conflicto colectivo. Su conocimiento legal y su rapidez de respuesta marcaron la diferencia.",
+    "photo": "https://i.pravatar.cc/200?img=60",
+    "approved": true,
+    "date": "2025-12-05"
+  },
+  {
+    "id": "test-4",
+    "name": "Claudia R.",
+    "role": "Ex empleada - Sector Salud",
+    "rating": 4,
+    "text": "Muy buen acompañamiento durante todo el proceso. Resolvieron mis dudas siempre a tiempo y el resultado fue favorable.",
+    "photo": "https://i.pravatar.cc/200?img=48",
+    "approved": true,
+    "date": "2025-11-18"
+  }
+]

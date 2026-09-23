@@ -1,0 +1,70 @@
+{
+  "banner": [
+    {
+      "id": "slide-1",
+      "type": "image",
+      "src": "https://picsum.photos/seed/asesoria-laboral-1/1920/1080",
+      "title": "Defendemos tus derechos laborales",
+      "subtitle": "Asesoría legal especializada en despidos injustificados, indemnizaciones y conflictos laborales.",
+      "buttonText": "Solicita tu asesoría gratis",
+      "buttonHref": "#contacto"
+    },
+    {
+      "id": "slide-2",
+      "type": "image",
+      "src": "https://picsum.photos/seed/asesoria-laboral-2/1920/1080",
+      "title": "Experiencia y resultados comprobados",
+      "subtitle": "Más de una década resolviendo casos laborales a favor de trabajadores y empresas.",
+      "buttonText": "Conoce casos de éxito",
+      "buttonHref": "#casos-exito"
+    },
+    {
+      "id": "slide-3",
+      "type": "image",
+      "src": "https://picsum.photos/seed/asesoria-laboral-3/1920/1080",
+      "title": "Estamos contigo en cada etapa",
+      "subtitle": "Acompañamiento personalizado desde la primera consulta hasta la resolución de tu caso.",
+      "buttonText": "Habla con un asesor",
+      "buttonHref": "#contacto"
+    }
+  ],
+  "hero": {
+    "kicker": "Despacho especializado en derecho laboral",
+    "heading": "Asesoría y Defensa Laboral",
+    "subheading": "Protegemos tus derechos como trabajador o empleador con estrategia legal, cercanía humana y resultados reales."
+  },
+  "about": {
+    "heading": "Quiénes somos",
+    "text": "Somos un despacho especializado en derecho laboral comprometido con la justicia y el bienestar de nuestros clientes. Acompañamos a trabajadores y empresas en cada etapa de sus conflictos laborales, ofreciendo asesoría clara, estrategia legal sólida y un trato humano y cercano. Nuestro equipo combina experiencia, ética profesional y pasión por defender lo que es justo.",
+    "team": [
+      {
+        "id": "hector",
+        "name": "Hector",
+        "role": "Socio Fundador · Litigio Laboral",
+        "bio": "Especialista en juicios laborales, indemnizaciones y negociación de conflictos entre trabajadores y empresas.",
+        "photo": "https://i.pravatar.cc/400?img=13"
+      },
+      {
+        "id": "fernanda",
+        "name": "Fernanda",
+        "role": "Socia · Asesoría y Cumplimiento",
+        "bio": "Encargada de la asesoría preventiva, cumplimiento normativo y atención personalizada a cada cliente.",
+        "photo": "https://i.pravatar.cc/400?img=32"
+      }
+    ]
+  },
+  "contactInfo": {
+    "phoneDisplay": "33 1455 7020",
+    "whatsappNumber": "523314557020",
+    "email": "contacto@asesoriaydefensalaboralmx.com",
+    "address": "Guadalajara, Jalisco, México",
+    "scheduleWeekdays": "Lunes a Viernes: 9:00 - 19:00",
+    "scheduleSaturday": "Sábados: 9:00 - 14:00"
+  },
+  "stats": [
+    { "id": "stat-1", "value": 12, "suffix": "+", "label": "Años de experiencia" },
+    { "id": "stat-2", "value": 500, "suffix": "+", "label": "Casos resueltos" },
+    { "id": "stat-3", "value": 95, "suffix": "%", "label": "Casos ganados" },
+    { "id": "stat-4", "value": 24, "suffix": "/7", "label": "Atención a clientes" }
+  ]
+}

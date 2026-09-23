@@ -1,0 +1,38 @@
+[
+  {
+    "id": "post-1",
+    "slug": "reforma-outsourcing-que-debes-saber",
+    "title": "Reforma al Outsourcing: qué debes saber como trabajador",
+    "excerpt": "Te explicamos en términos simples cómo la reforma en materia de subcontratación laboral protege tus derechos y qué hacer si tu empresa no cumple.",
+    "content": "La reforma en materia de subcontratación laboral (outsourcing) cambió por completo las reglas del juego en México. Hoy en día, la subcontratación de personal está prohibida salvo para servicios u obras especializadas debidamente registradas ante el REPSE (Registro de Prestadoras de Servicios Especializados u Obras Especializadas).\n\n¿Qué significa esto para ti como trabajador? En primer lugar, tienes derecho a estar inscrito directamente en la empresa donde realmente prestas tus servicios, con todas las prestaciones de ley: reparto de utilidades, seguridad social, antigüedad real y estabilidad en el empleo.\n\nSi tu empresa te mantiene contratado a través de un esquema de subcontratación no registrado, esto puede representar una simulación laboral, lo cual te da derecho a reclamar el reconocimiento de tu relación laboral directa con la empresa beneficiaria de tus servicios, además de todas las prestaciones que te correspondan retroactivamente.\n\nEn Asesoría y Defensa Laboral hemos ayudado a decenas de trabajadores a regularizar su situación y obtener las prestaciones que legalmente les corresponden. Si tienes dudas sobre tu esquema de contratación, agenda una asesoría gratuita con nosotros.",
+    "image": "https://picsum.photos/seed/blog-outsourcing/1200/700",
+    "category": "Derecho Laboral",
+    "date": "2026-03-02",
+    "likes": 24,
+    "published": true
+  },
+  {
+    "id": "post-2",
+    "slug": "cinco-senales-despido-injustificado",
+    "title": "5 señales de que tu despido fue injustificado",
+    "excerpt": "No todos los despidos son legales. Conoce las señales más comunes que indican que tu empresa actuó fuera de la ley y qué puedes hacer al respecto.",
+    "content": "Un despido injustificado ocurre cuando la empresa termina la relación laboral sin una causa comprobable establecida en el artículo 47 de la Ley Federal del Trabajo, o sin seguir el procedimiento correspondiente. Estas son 5 señales de alerta:\n\n1. No te entregaron un aviso de rescisión por escrito con la causa específica del despido.\n2. Te pidieron firmar una renuncia o un finiquito bajo presión.\n3. El motivo del despido fue una 'reestructura' sin liquidación completa conforme a la ley.\n4. No se te permitió defenderte ni se documentó ninguna falta previa.\n5. El despido ocurrió poco después de que reportaste una irregularidad, te embarazaste o te incapacitaste por enfermedad.\n\nSi identificas alguna de estas señales, es muy importante que no firmes ningún documento sin asesoría legal y que actúes rápido: tienes solamente 2 meses para demandar. En Asesoría y Defensa Laboral evaluamos tu caso sin costo y te decimos con claridad cuáles son tus opciones.",
+    "image": "https://picsum.photos/seed/blog-despido/1200/700",
+    "category": "Derechos del Trabajador",
+    "date": "2026-02-18",
+    "likes": 41,
+    "published": true
+  },
+  {
+    "id": "post-3",
+    "slug": "guia-empresas-evitar-demandas-laborales",
+    "title": "Guía para empresas: cómo evitar demandas laborales costosas",
+    "excerpt": "La prevención es la mejor estrategia legal. Te compartimos las prácticas clave que toda empresa debe implementar para reducir el riesgo de litigios laborales.",
+    "content": "Las demandas laborales pueden representar un costo económico y reputacional muy alto para cualquier empresa. La buena noticia es que la mayoría de los conflictos laborales son prevenibles con una estrategia legal adecuada. Estas son nuestras recomendaciones principales:\n\n1. Contratos claros y actualizados: cada puesto debe contar con un contrato individual de trabajo alineado con la operación real del empleado.\n2. Reglamento interior de trabajo vigente: registrado y comunicado a todo el personal.\n3. Procedimientos disciplinarios documentados: toda falta debe quedar registrada con actas administrativas firmadas por testigos.\n4. Cumplimiento en materia de seguridad social y REPSE si aplica subcontratación especializada.\n5. Asesoría legal antes de cualquier rescisión: una revisión previa puede evitar que una desvinculación se convierta en una demanda.\n\nEn Asesoría y Defensa Laboral acompañamos a empresas de todos los tamaños en la construcción de una cultura de cumplimiento laboral sólida, reduciendo riesgos legales y fortaleciendo la relación con sus colaboradores.",
+    "image": "https://picsum.photos/seed/blog-empresas/1200/700",
+    "category": "Empresas",
+    "date": "2026-01-10",
+    "likes": 17,
+    "published": true
+  }
+]

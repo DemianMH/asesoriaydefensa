@@ -1,0 +1,38 @@
+[
+  {
+    "id": "faq-1",
+    "question": "¿Cuánto tiempo tengo para demandar un despido injustificado?",
+    "answer": "En México, la Ley Federal del Trabajo establece un plazo de 2 meses a partir de la fecha del despido para presentar tu demanda. Te recomendamos acudir con un abogado laboral lo antes posible para no perder este derecho.",
+    "order": 1
+  },
+  {
+    "id": "faq-2",
+    "question": "¿Qué indemnización me corresponde por un despido injustificado?",
+    "answer": "Generalmente incluye 3 meses de salario, 20 días por año trabajado, prima de antigüedad, aguinaldo y vacaciones proporcionales, además de salarios caídos. El monto exacto depende de tu caso particular; en tu asesoría gratuita calculamos el estimado.",
+    "order": 2
+  },
+  {
+    "id": "faq-3",
+    "question": "¿La primera consulta tiene costo?",
+    "answer": "No. La primera asesoría es completamente gratuita y sin compromiso. Evaluamos tu caso y te explicamos con claridad cuáles son tus opciones legales.",
+    "order": 3
+  },
+  {
+    "id": "faq-4",
+    "question": "¿Puedo demandar si no tenía contrato por escrito?",
+    "answer": "Sí. La ley protege a todos los trabajadores, tengan o no contrato firmado. Existen múltiples formas de acreditar la relación laboral, como recibos de nómina, testigos, mensajes o credenciales de la empresa.",
+    "order": 4
+  },
+  {
+    "id": "faq-5",
+    "question": "¿También asesoran a empresas y empleadores?",
+    "answer": "Sí. Ofrecemos asesoría preventiva y de cumplimiento normativo para empresas: contratos, reglamentos internos, procedimientos de rescisión y representación en juicios laborales.",
+    "order": 5
+  },
+  {
+    "id": "faq-6",
+    "question": "¿Cuánto dura un juicio laboral?",
+    "answer": "El tiempo varía según la complejidad del caso y la carga de trabajo del tribunal, pero en promedio puede tomar entre 6 meses y 2 años. Buscamos siempre la vía más rápida y efectiva, incluyendo la negociación cuando conviene al cliente.",
+    "order": 6
+  }
+]
