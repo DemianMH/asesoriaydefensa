@@ -79,7 +79,7 @@ export default function ChatbotWidget({
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 30, scale: 0.9 }}
             transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-            className="flex h-[520px] w-[90vw] max-w-sm flex-col overflow-hidden rounded-3xl border border-gold-400/20 bg-navy-950 shadow-[0_30px_80px_-20px_rgba(0,0,0,0.6)]"
+            className="flex h-[min(520px,calc(100dvh-160px))] w-[90vw] max-w-sm flex-col overflow-hidden rounded-3xl border border-gold-400/20 bg-navy-950 shadow-[0_30px_80px_-20px_rgba(0,0,0,0.6)]"
           >
             {/* Header */}
             <div className="flex items-center gap-3 bg-gradient-to-r from-navy-900 to-navy-800 px-4 py-3.5">
