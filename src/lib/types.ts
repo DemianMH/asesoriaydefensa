@@ -77,19 +77,6 @@ export type BlogPost = {
   published: boolean;
 };
 
-export type ChatbotOption = {
-  id: string;
-  label: string;
-  answer: string;
-};
-
-export type ChatbotFlow = {
-  greeting: string;
-  options: ChatbotOption[];
-  closingMessage: string;
-  whatsappCta: string;
-};
-
 export type ContactSubmission = {
   id: string;
   name: string;

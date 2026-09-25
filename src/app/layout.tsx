@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Manrope } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const playfair = Playfair_Display({
@@ -94,7 +95,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-full flex flex-col bg-cream text-ink">{children}</body>
+      <body className="min-h-full flex flex-col bg-cream text-ink">
+        {children}
+        <Script src="https://widget.manychat.com/5650194_e8dbe.js" strategy="afterInteractive" />
+        <Script src="https://mccdn.me/assets/js/widget.js" strategy="afterInteractive" />
+      </body>
     </html>
   );
 }

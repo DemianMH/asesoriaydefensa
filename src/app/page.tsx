@@ -1,5 +1,5 @@
 import { readContent } from "@/lib/store";
-import type { BlogPost, ChatbotFlow, Faq, SiteContent, Testimonial } from "@/lib/types";
+import type { BlogPost, Faq, SiteContent, Testimonial } from "@/lib/types";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Hero from "@/components/sections/Hero";
@@ -9,17 +9,15 @@ import SuccessCases from "@/components/sections/SuccessCases";
 import Blog from "@/components/sections/Blog";
 import FAQ from "@/components/sections/FAQ";
 import ContactForm from "@/components/sections/ContactForm";
-import ChatbotWidget from "@/components/chatbot/ChatbotWidget";
 
 export const revalidate = 0;
 
 export default async function Home() {
-  const [site, faqs, testimonials, posts, chatbot] = await Promise.all([
+  const [site, faqs, testimonials, posts] = await Promise.all([
     readContent<SiteContent>("site"),
     readContent<Faq[]>("faqs"),
     readContent<Testimonial[]>("testimonials"),
     readContent<BlogPost[]>("posts"),
-    readContent<ChatbotFlow>("chatbot"),
   ]);
 
   return (
@@ -40,7 +38,6 @@ export default async function Home() {
         <ContactForm site={site} />
       </main>
       <Footer site={site} />
-      <ChatbotWidget flow={chatbot} whatsappNumber={site.contactInfo.whatsappNumber} />
     </>
   );
 }

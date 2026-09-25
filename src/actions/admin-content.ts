@@ -3,14 +3,7 @@
 import { revalidatePath } from "next/cache";
 import { requireAdmin } from "@/lib/auth";
 import { readContent, writeContent } from "@/lib/store";
-import type {
-  BlogPost,
-  ChatbotFlow,
-  ContactSubmission,
-  Faq,
-  SiteContent,
-  Testimonial,
-} from "@/lib/types";
+import type { BlogPost, ContactSubmission, Faq, SiteContent, Testimonial } from "@/lib/types";
 
 type ActionResult = { ok: boolean; message: string };
 
@@ -91,19 +84,6 @@ export async function deleteBlogPost(postId: string): Promise<ActionResult> {
     await writeContent("posts", next);
     refreshSite();
     return { ok: true, message: "Publicación eliminada." };
-  } catch (error) {
-    return fail(error);
-  }
-}
-
-// ---------- Chatbot flow ----------
-
-export async function saveChatbotFlow(flow: ChatbotFlow): Promise<ActionResult> {
-  try {
-    await requireAdmin();
-    await writeContent("chatbot", flow);
-    refreshSite();
-    return { ok: true, message: "Flujo del chatbot actualizado." };
   } catch (error) {
     return fail(error);
   }

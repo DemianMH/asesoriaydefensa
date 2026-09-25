@@ -8,35 +8,25 @@ import {
   HelpCircle,
   Star,
   Newspaper,
-  Bot,
   Mail,
   LogOut,
   ExternalLink,
 } from "lucide-react";
-import type {
-  BlogPost,
-  ChatbotFlow,
-  ContactSubmission,
-  Faq,
-  SiteContent,
-  Testimonial,
-} from "@/lib/types";
+import type { BlogPost, ContactSubmission, Faq, SiteContent, Testimonial } from "@/lib/types";
 import { logoutAdmin } from "@/actions/admin-auth";
 import GeneralTab from "./tabs/GeneralTab";
 import FaqTab from "./tabs/FaqTab";
 import TestimonialsTab from "./tabs/TestimonialsTab";
 import BlogTab from "./tabs/BlogTab";
-import ChatbotTab from "./tabs/ChatbotTab";
 import SubmissionsTab from "./tabs/SubmissionsTab";
 
-type TabKey = "general" | "faqs" | "testimonials" | "blog" | "chatbot" | "submissions";
+type TabKey = "general" | "faqs" | "testimonials" | "blog" | "submissions";
 
 const TABS: { key: TabKey; label: string; icon: typeof LayoutDashboard }[] = [
   { key: "general", label: "Contenido general", icon: LayoutDashboard },
   { key: "faqs", label: "Preguntas frecuentes", icon: HelpCircle },
   { key: "testimonials", label: "Testimonios", icon: Star },
   { key: "blog", label: "Blog / Foro", icon: Newspaper },
-  { key: "chatbot", label: "Chatbot", icon: Bot },
   { key: "submissions", label: "Mensajes", icon: Mail },
 ];
 
@@ -45,14 +35,12 @@ export default function AdminDashboard({
   initialFaqs,
   initialTestimonials,
   initialPosts,
-  initialChatbot,
   initialSubmissions,
 }: {
   initialSite: SiteContent;
   initialFaqs: Faq[];
   initialTestimonials: Testimonial[];
   initialPosts: BlogPost[];
-  initialChatbot: ChatbotFlow;
   initialSubmissions: ContactSubmission[];
 }) {
   const [tab, setTab] = useState<TabKey>("general");
@@ -124,7 +112,6 @@ export default function AdminDashboard({
               {tab === "faqs" && <FaqTab initialFaqs={initialFaqs} />}
               {tab === "testimonials" && <TestimonialsTab initialTestimonials={initialTestimonials} />}
               {tab === "blog" && <BlogTab initialPosts={initialPosts} />}
-              {tab === "chatbot" && <ChatbotTab initialChatbot={initialChatbot} />}
               {tab === "submissions" && <SubmissionsTab initialSubmissions={initialSubmissions} />}
             </div>
           </div>
