@@ -8,13 +8,15 @@ el contenido en vivo, sin necesidad de tocar código.
 
 - Landing de una sola página: banner/carrusel, nosotros (Hector y Fernanda),
   servicios, casos de éxito/testimonios con calificación, blog/foro con "me gusta",
-  preguntas frecuentes y formulario de contacto.
-- Chatbot flotante integrado con **ManyChat** (widget cargado en todo el sitio;
-  el flujo de conversación se administra desde el panel de ManyChat, no desde
-  este repo).
+  preguntas frecuentes, formulario de contacto y chatbot flotante propio que
+  termina en WhatsApp.
+- Scripts de **ManyChat** ya incrustados en el sitio (`src/app/layout.tsx`),
+  listos para cuando se publique el widget desde el panel de ManyChat. Mientras
+  tanto, el chatbot flotante propio sigue visible para que siempre haya un chat
+  funcionando en el sitio.
 - Panel administrador en `/admin` para editar en vivo: banner, textos, equipo,
-  estadísticas, datos de contacto, FAQs, testimonios, publicaciones del blog
-  y bandeja de mensajes de contacto.
+  estadísticas, datos de contacto, FAQs, testimonios, publicaciones del blog,
+  flujo del chatbot propio y bandeja de mensajes de contacto.
 - SEO: metadatos completos, Open Graph, JSON-LD (LegalService), `sitemap.xml` y
   `robots.txt` generados automáticamente.
 - Envío de correo del formulario de contacto vía SMTP (configurable, por ejemplo
@@ -74,7 +76,7 @@ configurado todavía).
 
 No requiere configuración adicional: al desplegar en Netlify, `@netlify/blobs`
 se activa automáticamente y ahí se guarda todo el contenido editable del panel
-admin (banner, FAQs, testimonios, blog, mensajes de contacto).
+admin (banner, FAQs, testimonios, blog, chatbot, mensajes de contacto).
 
 ## Panel administrador
 
@@ -87,19 +89,31 @@ Ruta: `/admin` — protegido con contraseña (`ADMIN_PASSWORD`). Desde ahí se e
 - **Testimonios**: aprobar/ocultar los comentarios que dejan los visitantes desde
   el sitio, editarlos o agregar nuevos manualmente.
 - **Blog / Foro**: crear, editar, publicar/despublicar o eliminar publicaciones.
+- **Chatbot**: editar el saludo, las preguntas rápidas, las respuestas y el
+  mensaje que invita a continuar por WhatsApp.
 - **Mensajes**: bandeja de entrada de los mensajes enviados desde el formulario
   de contacto.
 
-## Chatbot (ManyChat)
+## Chatbot propio + ManyChat
 
-El widget de ManyChat se carga en `src/app/layout.tsx` (scripts de
-`widget.manychat.com` y `mccdn.me`) y aparece en todas las páginas del sitio.
-El saludo, las preguntas rápidas y las respuestas del bot **se configuran desde
-el panel de ManyChat** (manychat.com), no desde este repositorio ni desde
-`/admin`. La API key de ManyChat (`MANYCHAT_API_KEY`) queda documentada en
-`.env.example` por si más adelante se necesita una integración desde el
-servidor (por ejemplo, enviar automáticamente los mensajes del formulario de
-contacto a ManyChat); hoy no se usa en el código.
+Hoy el sitio muestra el **chatbot flotante propio** (burbuja abajo a la
+derecha, editable desde `/admin`), que simula una conversación y termina
+invitando a continuar por WhatsApp.
+
+Los scripts de **ManyChat** (`widget.manychat.com` y `mccdn.me`) ya están
+incrustados site-wide en `src/app/layout.tsx` y cargan correctamente (se
+confirmó que el pixel de ManyChat registra la visita), pero ManyChat **no
+muestra ninguna burbuja todavía** porque el widget no está publicado del lado
+de la cuenta de ManyChat. Para activarlo: entrar a manychat.com → Growth
+Tools/Automation → Website Widget → publicarlo y revisar que el dominio del
+sitio esté autorizado. Cuando esté publicado, avisar para quitar el chatbot
+propio y dejar solo el de ManyChat (tener los dos activos a la vez mostraría
+dos burbujas superpuestas).
+
+El saludo, las preguntas rápidas y las respuestas del chatbot propio se
+configuran desde `/admin` (no dependen de ManyChat). La API key de ManyChat
+(`MANYCHAT_API_KEY`) queda documentada en `.env.example` por si más adelante
+se necesita una integración desde el servidor; hoy no se usa en el código.
 
 ## Estructura del proyecto
 
@@ -107,7 +121,7 @@ contacto a ManyChat); hoy no se usa en el código.
 src/
   app/            Rutas (home, /blog/[slug], /admin, sitemap, robots)
   actions/        Server Actions (contacto, testimonios, likes, admin)
-  components/     Componentes de UI, layout y secciones
+  components/     Componentes de UI, layout, secciones y chatbot
   content/        Contenido semilla (se usa la primera vez o en local)
   lib/            Autenticación, almacenamiento (Netlify Blobs/local), email
 ```

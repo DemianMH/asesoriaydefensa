@@ -7,8 +7,10 @@ import { readContent } from "@/lib/store";
 import type { BlogPost, SiteContent } from "@/lib/types";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import ChatbotWidget from "@/components/chatbot/ChatbotWidget";
 import LikeButton from "@/components/blog/LikeButton";
 import RevealOnScroll from "@/components/ui/RevealOnScroll";
+import type { ChatbotFlow } from "@/lib/types";
 
 export const revalidate = 0;
 
@@ -44,9 +46,10 @@ export default async function BlogPostPage(props: PageProps<"/blog/[slug]">) {
   const post = await getPost(slug);
   if (!post) notFound();
 
-  const [site, allPosts] = await Promise.all([
+  const [site, allPosts, chatbot] = await Promise.all([
     readContent<SiteContent>("site"),
     readContent<BlogPost[]>("posts"),
+    readContent<ChatbotFlow>("chatbot"),
   ]);
 
   const related = allPosts.filter((p) => p.published && p.id !== post.id).slice(0, 2);
@@ -134,6 +137,7 @@ export default async function BlogPostPage(props: PageProps<"/blog/[slug]">) {
         )}
       </main>
       <Footer site={site} />
+      <ChatbotWidget flow={chatbot} whatsappNumber={site.contactInfo.whatsappNumber} />
     </>
   );
 }
