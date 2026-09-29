@@ -20,7 +20,7 @@ el contenido en vivo, sin necesidad de tocar código.
 - SEO: metadatos completos, Open Graph, JSON-LD (LegalService), `sitemap.xml` y
   `robots.txt` generados automáticamente.
 - Envío de correo del formulario de contacto vía SMTP (configurable, por ejemplo
-  con el correo de cPanel del dominio).
+  con el correo del plan básico de DirectAdmin en Neubox).
 - Persistencia de contenido con **Netlify Blobs** (plan gratuito de Netlify) en
   producción, con respaldo automático en disco para desarrollo local.
 
@@ -52,7 +52,7 @@ Revisa `.env.example` para la lista completa. Las más importantes:
 | `NEXT_PUBLIC_SITE_URL` | URL pública final del sitio (para SEO) |
 | `ADMIN_PASSWORD` | Contraseña de acceso a `/admin` |
 | `ADMIN_SECRET` | Cadena secreta para firmar la sesión del admin |
-| `SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, `SMTP_PASS`, `SMTP_FROM` | Datos del correo saliente (SMTP de cPanel u otro proveedor) |
+| `SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, `SMTP_PASS`, `SMTP_FROM` | Datos del correo saliente (SMTP de DirectAdmin/Neubox u otro proveedor) |
 | `CONTACT_TO_EMAIL` | Correo que recibe los mensajes del formulario de contacto |
 
 Configúralas en **Netlify > Site configuration > Environment variables** antes o
@@ -68,9 +68,11 @@ configurado todavía).
 3. Netlify detecta Next.js automáticamente (usa el plugin `@netlify/plugin-nextjs`
    ya configurado en `netlify.toml`). Build command: `npm run build`.
 4. Agrega las variables de entorno de `.env.example` en el panel de Netlify.
-5. Despliega. Una vez publicado, conecta tu dominio (comprado en Neubox) desde
-   **Domain settings** apuntando los DNS a Netlify, o usando el registro CNAME/A
-   que Netlify te indique.
+5. Despliega. Una vez publicado, conecta el dominio **asesoriaydefensalaboral.com.mx**
+   (comprado en Neubox) desde **Domain settings** apuntando los DNS a Netlify, o
+   usando el registro CNAME/A que Netlify te indique. El correo (con el plan
+   básico de DirectAdmin en Neubox) se maneja aparte, con sus propios registros
+   MX — no se ve afectado por apuntar el dominio a Netlify para el sitio web.
 
 ### Netlify Blobs (base de datos gratuita)
 

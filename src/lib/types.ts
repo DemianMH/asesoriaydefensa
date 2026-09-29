@@ -18,6 +18,7 @@ export type SiteContent = {
   about: {
     heading: string;
     text: string;
+    teamIntro: string;
     team: TeamMember[];
   };
   contactInfo: {
@@ -35,8 +36,6 @@ export type TeamMember = {
   id: string;
   name: string;
   role: string;
-  bio: string;
-  photo: string;
 };
 
 export type StatItem = {

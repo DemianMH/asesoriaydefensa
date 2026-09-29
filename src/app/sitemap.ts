@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { readContent } from "@/lib/store";
 import type { BlogPost } from "@/lib/types";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://asesoriaydefensalaboralmx.com";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://asesoriaydefensalaboral.com.mx";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const posts = await readContent<BlogPost[]>("posts");

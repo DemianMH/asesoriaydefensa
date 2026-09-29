@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Scale } from "lucide-react";
 import type { SiteContent } from "@/lib/types";
 import SectionHeading from "@/components/ui/SectionHeading";
@@ -17,36 +16,35 @@ export default function About({ site }: { site: SiteContent }) {
           description={site.about.text}
         />
 
-        <div className="mt-16 grid gap-10 md:grid-cols-2">
-          {site.about.team.map((member, i) => (
-            <RevealOnScroll key={member.id} direction={i % 2 === 0 ? "left" : "right"} delay={i * 0.1}>
-              <div className="group relative overflow-hidden rounded-3xl bg-navy-950 shadow-[var(--shadow-navy)]">
-                <div className="relative h-80 w-full overflow-hidden">
-                  <Image
-                    src={member.photo}
-                    alt={member.name}
-                    fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-110"
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/40 to-transparent" />
-                </div>
-                <div className="relative p-6">
-                  <div className="flex items-center gap-2 text-gold-400">
-                    <Scale size={18} />
-                    <span className="text-xs uppercase tracking-[0.25em]">{member.role}</span>
-                  </div>
-                  <h3 className="font-display mt-2 text-2xl text-white">{member.name}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-white/70">{member.bio}</p>
-                </div>
-                <div className="absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r from-gold-600 via-gold-300 to-gold-600 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500" />
-              </div>
-            </RevealOnScroll>
-          ))}
-        </div>
+        <RevealOnScroll direction="up" delay={0.1} className="mt-16">
+          <div className="relative overflow-hidden rounded-3xl bg-navy-950 px-6 py-12 text-center shadow-[var(--shadow-navy)] sm:px-14">
+            <div className="pointer-events-none absolute inset-0 opacity-[0.05] bg-[radial-gradient(circle_at_1px_1px,white_1px,transparent_0)] bg-[size:26px_26px]" />
 
-        <RevealOnScroll direction="up" delay={0.15} className="mt-16">
-          <div className="grid grid-cols-2 gap-6 rounded-3xl bg-navy-950 px-6 py-10 shadow-[var(--shadow-navy)] sm:grid-cols-4">
+            <Scale className="relative mx-auto text-gold-400" size={32} />
+            <p className="relative mx-auto mt-6 max-w-2xl text-base leading-relaxed text-white/80 sm:text-lg">
+              {site.about.teamIntro}
+            </p>
+
+            <div className="relative mt-10 flex flex-wrap items-center justify-center gap-x-10 gap-y-6">
+              {site.about.team.map((member, i) => (
+                <div key={member.id} className="flex items-center gap-x-10">
+                  <div>
+                    <p className="font-display text-3xl text-white sm:text-4xl">{member.name}</p>
+                    <p className="mt-1 text-xs uppercase tracking-[0.25em] text-gold-400 sm:text-sm">
+                      {member.role}
+                    </p>
+                  </div>
+                  {i < site.about.team.length - 1 && (
+                    <span className="font-display text-2xl text-gold-400/50 sm:text-3xl">&amp;</span>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </RevealOnScroll>
+
+        <RevealOnScroll direction="up" delay={0.2} className="mt-10">
+          <div className="grid grid-cols-1 gap-6 rounded-3xl bg-navy-950 px-6 py-10 shadow-[var(--shadow-navy)] sm:grid-cols-3">
             {site.stats.map((stat) => (
               <div key={stat.id} className="text-center">
                 <p className="font-display text-3xl font-semibold text-gold-gradient sm:text-4xl">

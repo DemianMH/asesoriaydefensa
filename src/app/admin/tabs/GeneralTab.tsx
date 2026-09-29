@@ -150,6 +150,13 @@ export default function GeneralTab({ initialSite }: { initialSite: SiteContent }
             onChange={(e) => setSite({ ...site, about: { ...site.about, text: e.target.value } })}
           />
         </Field>
+        <Field label="Texto sobre el equipo (unificado, sin fotos)">
+          <TextArea
+            rows={3}
+            value={site.about.teamIntro}
+            onChange={(e) => setSite({ ...site, about: { ...site.about, teamIntro: e.target.value } })}
+          />
+        </Field>
 
         <div className="flex flex-col gap-4">
           {site.about.team.map((member) => (
@@ -170,7 +177,7 @@ export default function GeneralTab({ initialSite }: { initialSite: SiteContent }
                   }
                 />
               </Field>
-              <Field label="Cargo">
+              <Field label="Especialidad">
                 <TextInput
                   value={member.role}
                   onChange={(e) =>
@@ -180,39 +187,6 @@ export default function GeneralTab({ initialSite }: { initialSite: SiteContent }
                         ...site.about,
                         team: site.about.team.map((m) =>
                           m.id === member.id ? { ...m, role: e.target.value } : m
-                        ),
-                      },
-                    })
-                  }
-                />
-              </Field>
-              <Field label="Foto (URL)">
-                <TextInput
-                  value={member.photo}
-                  onChange={(e) =>
-                    setSite({
-                      ...site,
-                      about: {
-                        ...site.about,
-                        team: site.about.team.map((m) =>
-                          m.id === member.id ? { ...m, photo: e.target.value } : m
-                        ),
-                      },
-                    })
-                  }
-                />
-              </Field>
-              <Field label="Biografía">
-                <TextArea
-                  rows={2}
-                  value={member.bio}
-                  onChange={(e) =>
-                    setSite({
-                      ...site,
-                      about: {
-                        ...site.about,
-                        team: site.about.team.map((m) =>
-                          m.id === member.id ? { ...m, bio: e.target.value } : m
                         ),
                       },
                     })
